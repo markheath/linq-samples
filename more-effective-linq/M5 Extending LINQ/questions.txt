@@ -1,0 +1,20 @@
+Q1
+What is the capital of France?
+Paris
+Bordeaux
+Milan
+London
+
+Q2
+What color is a banana?
+Yellow
+Blue
+Red
+Purple
+
+Q3
+Which of these methods is part of MoreLINQ?
+Pairwise
+Load
+Run
+Find
