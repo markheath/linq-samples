@@ -1,10 +1,10 @@
 <Query Kind="Statements" />
 
 var customers = new[] { 
-	new { Name = "Annie", Email = "annie@test.com" },
+	new { Name = "Annie", Email = "annie@example.com" },
 	new { Name = "Ben", Email = "" },
-	new { Name = "Lily", Email = "lily@test.com" },
-	new { Name = "Joel", Email = "joel@test.com" },
+	new { Name = "Lily", Email = "lily@example.com" },
+	new { Name = "Joel", Email = "joel@example.com" },
 	new { Name = "Sam", Email = "" },
 };
 
@@ -13,7 +13,7 @@ foreach (var customer in customers)
 {
 	if (!String.IsNullOrEmpty(customer.Email))
 	{
-		Console.WriteLine("Sending email to {0}", customer.Name);
+		Console.WriteLine($"Sending email to {customer.Name}");
 	}
 }
 
