@@ -12,8 +12,8 @@ void Main()
 
 static class MyLinqExtensions
 {
-	public static IEnumerable<KeyValuePair<TKey, int>> CountBy<TSource, TKey>(this IEnumerable<TSource> source,
-																			   Func<TSource, TKey> selector)
+	public static IEnumerable<KeyValuePair<TKey, int>> CountBy<TSource, TKey>(
+			this IEnumerable<TSource> source, Func<TSource, TKey> selector)
 	{
 		var counts = new Dictionary<TKey, int>();
 		foreach (var item in source)

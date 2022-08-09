@@ -11,7 +11,7 @@ Directory.CreateDirectory(downloadFolder);
 
 var diagsClient = new BlobContainerClient(connectionString, "diags");
 
-var logFiles = diagsClient.GetBlobs(prefix: "skypevoicechangerpro/2016/01")
+var logFiles = diagsClient.GetBlobs(prefix: "skypevoicechangerpro/2016/02")
 				.Select(b => new { Blob = b, 
 					Name = String.Join("-", b.Name.Split('/').Take(5)) + ".csv" })
 				.Where(b => !File.Exists(Path.Combine(downloadFolder, b.Name)));

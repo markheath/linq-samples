@@ -96,7 +96,6 @@ private static string GetRssFeed(HtmlDocument htmlDoc)
 
 private static HtmlDocument ToHtmlDocument(string html)
 {
-
 	var htmlDoc = new HtmlDocument();	
 	htmlDoc.LoadHtml(html);
 	return htmlDoc;

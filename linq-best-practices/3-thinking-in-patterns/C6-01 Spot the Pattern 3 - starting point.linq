@@ -15,6 +15,13 @@ List<Order> orders = new List<Order>()
 	new Order { Id = 768, Amount = 32.50m, CustomerName = "Claire", Status = "Delivered" },
 };
 
+
+void Main()
+{
+	CheckOrdersForRefunds();
+	CheckOrdersAreDelivered();
+}
+
 void CheckOrdersForRefunds()
 {
 	bool anyRefunded = false;
@@ -51,8 +58,3 @@ void CheckOrdersAreDelivered()
 		Console.WriteLine("Not everything was delivered");
 }
 
-void Main()
-{
-	CheckOrdersForRefunds();
-	CheckOrdersAreDelivered();
-}

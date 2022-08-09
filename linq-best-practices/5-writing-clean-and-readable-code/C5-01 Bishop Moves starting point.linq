@@ -1,4 +1,4 @@
-<Query Kind="Program" />
+<Query Kind="Expression" />
 
 // we start with a Bishop on c6
 // what positions can it reach in one move?
