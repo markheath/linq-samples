@@ -34,32 +34,9 @@ void Main()
 	where linkHref != null
 	select new { postTitle, postLink, linkTitle, linkHref };
 
-
-	//links.Where(l => l.linkTitle.Contains("Azure")).Dump("Example 1");
-	//links.First(l => l.linkTitle.Contains("Azure")).Dump("Example 2");
-
-	/*var list = links.ToList();
-	Console.WriteLine($"Found {list.Count} links");
-	list.First(l => l.linkTitle.Contains("Azure"))
-		.Dump("Example 3");*/
-
-	
-	//links.Where(l => l.linkTitle.Contains("Azure")).Dump("Example 4a");
-	//links.Where(l => l.linkTitle.Contains("Blazor")).Dump("Example 4b");
-
-	/*links.Where(l => l.linkTitle.Contains("Azure") ||
-				l.linkTitle.Contains("Blazor"))
-				.GroupBy(l => l.linkTitle.Contains("Blazor") ? "Blazor":"Azure")
-				.Dump("Example 5");*/
-
-	/*
-	
-	
-	var list = links.ToList();	
-	list.Where(l => l.linkTitle.Contains("Azure")).Dump("Example 6a");
-	list.Where(l => l.linkTitle.Contains("Blazor")).Dump("Example 6b");
-	
-	*/
+	var list = links.ToList();
+	list.Where(l => l.linkTitle.Contains("Azure")).Dump();
+	list.Where(l => l.linkTitle.Contains("Blazor")).Dump();
 }
 
 static HttpClient xmlClient = BuildXmlClient();
