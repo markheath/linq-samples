@@ -20,7 +20,7 @@ void Main()
 		.Dump();
 }
 
-record DownloadResult(string Html, Exception Error)
+record DownloadResult(string Html, Exception Error);
 
 DownloadResult TryDownloadAsString(string url)
 {
@@ -28,7 +28,7 @@ DownloadResult TryDownloadAsString(string url)
 	{
 		return new DownloadResult(DownloadAsString(url), null);
 	}
-	catch (WebException we)
+	catch (HttpRequestException we)
 	{
 		return new DownloadResult(null, we);
 	}
