@@ -6,7 +6,7 @@
 void Main()
 {
 	var sites = new[] { 
-		"https://www.pluralsight.com",
+		"https://pluralsight.com",
 		"https://doesntexist.xyz",
 		"https://markheath.net",
 		"https://www.linqpad.net",
@@ -18,9 +18,17 @@ void Main()
 		.Dump();
 }
 
-static HttpClient client = new HttpClient();
-string DownloadAsString(string url)
+static HttpClient client = BuildClient();
+
+static HttpClient BuildClient()
 {
+	var c = new HttpClient();
+	c.DefaultRequestHeaders.Add("User-Agent", "Other");
+	return c;
+}
+
+string DownloadAsString(string url)
+{	
 	// note: blocking call is an antipattern - see the module on IAsyncEnumerable for how to avoid this
 	return client.GetStringAsync(url).GetAwaiter().GetResult();
 }

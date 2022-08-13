@@ -23,7 +23,15 @@ void LogException(string url, HttpRequestException we)
 	Console.WriteLine($"Error downloading {url}: {we.Message}");
 }
 
-static HttpClient client = new HttpClient();
+static HttpClient client = BuildClient();
+
+static HttpClient BuildClient()
+{
+	var c = new HttpClient();
+	c.DefaultRequestHeaders.Add("User-Agent", "Other");
+	return c;
+}
+
 string DownloadAsString(string url)
 {
 	// note: blocking call is an antipattern - see the module on IAsyncEnumerable for how to avoid this

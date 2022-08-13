@@ -16,7 +16,7 @@ void Main()
 	};
 
 	// real code
-	//FindLinks(sites, "Azure", DownloadHtml).Dump();
+	FindLinks(sites, "Azure", DownloadHtml).Dump();
 
 	// unit test code
 	FindLinks(sites, "Azure", s => "<html>Hello World</html>").Dump();
