@@ -5,4 +5,4 @@ Enumerable.Range(5, 10)
 	.Select(n => n * n)
 	.Dump("Step 2")
 	.Select(n => n / 2)
-	.Dump("Step 3")
+

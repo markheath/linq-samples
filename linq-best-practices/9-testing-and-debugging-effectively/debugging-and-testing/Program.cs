@@ -1,4 +1,4 @@
 ﻿using DebugAndTestDemo;
 
-Debugging.Example4();
+Debugging.Example1();
 Console.ReadKey();

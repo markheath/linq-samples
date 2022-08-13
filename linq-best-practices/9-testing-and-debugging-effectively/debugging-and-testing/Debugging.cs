@@ -16,7 +16,7 @@ class Debugging
 
     public static void Example2()
     {
-        var numbers = Enumerable.Range(1, 10);
+        var numbers = Enumerable.Range(1, 10).ToList();
         var squared = numbers.Select(n => n * n).ToList();
         var halved = squared.Select(n => n / 2).ToList();
         var minusFive = halved.Select(n => n - 5).ToList();
