@@ -7,6 +7,7 @@ var cts = new CancellationTokenSource();
 cts.CancelAfter(TimeSpan.FromSeconds(3));
 await foreach (var message in GetMessages(10).WithCancellation(cts.Token))
 {
+	// cts.Token.ThrowIfCancellationRequested();
 	Console.WriteLine(message);
 }
 
