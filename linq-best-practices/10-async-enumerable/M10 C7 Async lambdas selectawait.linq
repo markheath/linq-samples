@@ -5,8 +5,9 @@
 </Query>
 
 var messages = GetMessages(10)
-				.Where(m => m.EndsWith("3"))
-				.Select(m => m.ToUpper());
+				.WhereAwait(async m => await CalculateSentiment(m) > 5)
+				.SelectAwait(async m => await TranslateMessage(m));
+
 await foreach (var message in messages)
 {
 	Console.WriteLine(message);

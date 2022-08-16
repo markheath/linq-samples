@@ -4,9 +4,11 @@
   <Namespace>System.Threading.Tasks</Namespace>
 </Query>
 
-var messages = GetMessages(10)
-				.Where(m => m.EndsWith("3"))
-				.Select(m => m.ToUpper());
+var messages = new[] { "Hello world 10", "Hello world 20", "Hello world 30", "Hello world 40" }
+				.ToAsyncEnumerable()
+				.WhereAwait(async m => await CalculateSentiment(m) > 5)
+				.SelectAwait(async m => await TranslateMessage(m));
+
 await foreach (var message in messages)
 {
 	Console.WriteLine(message);
