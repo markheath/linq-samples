@@ -12,7 +12,7 @@ await foreach (var message in messages)
 	Console.WriteLine(message);
 }
 
-async Task<string> Translate(string message)
+async Task<string> TranslateMessage(string message)
 {
 	await Task.Delay(500); // simulate a network call
 	return message.Replace("Hello", "Bonjour")
