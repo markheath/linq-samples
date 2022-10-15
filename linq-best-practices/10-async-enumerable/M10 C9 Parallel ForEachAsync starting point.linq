@@ -16,7 +16,8 @@ var sites = new[] {
 
 var matches = sites
 	.ToAsyncEnumerable()
-	.SelectAwait(async url => new { Url = url, Html = await client.GetStringAsync(url) })
+	.SelectAwait(async url => new { Url = url, 
+		Html = await client.GetStringAsync(url) })
 	.Where(site => Regex.Match(site.Html, "azure").Success);
 
 await foreach (var match in matches)

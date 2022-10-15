@@ -15,10 +15,10 @@ var sites = new[] {
 	"https://stackoverflow.com",
 };
 
-await Parallel.ForEachAsync(sites,
-	new ParallelOptions() { MaxDegreeOfParallelism = 3 },
-	async (url,cancellationToken) => await SearchSite(url, "azure")
-	);
+var options = new ParallelOptions() { MaxDegreeOfParallelism = 3 };
+
+await Parallel.ForEachAsync(sites, options,
+	async (url,cancellationToken) => await SearchSite(url, "azure"));
 
 async Task SearchSite(string url, string searchTerm)
 {

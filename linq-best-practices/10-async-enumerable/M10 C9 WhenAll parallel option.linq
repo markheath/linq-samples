@@ -16,10 +16,12 @@ var sites = new[] {
 };
 
 var tasks = sites
-	.Select(async url => new { Url = url, Html = await client.GetStringAsync(url) });
+	.Select(async url => 
+		new { Url = url, Html = await client.GetStringAsync(url) });
 var siteInfo = await Task.WhenAll(tasks);
 	
-var matches = siteInfo.Where(site => Regex.Match(site.Html, "azure").Success);
+var matches = siteInfo
+				.Where(site => Regex.Match(site.Html, "azure").Success);
 
 foreach (var match in matches)
 {
