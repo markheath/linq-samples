@@ -16,8 +16,8 @@ Video solutions in both C# using LINQ (and MoreLINQ) and F# for all the [Advent 
 ### MoreLINQ Demos
 Demos accompanying a [series of YouTube videos](https://www.youtube.com/watch?v=LmeTMUptJPo&list=PLzUdt2T2KyAdVmA681z98tpLQSagXBLdP) I made demonstrating the capabilities of the [MoreLINQ library](https://morelinq.github.io/)
 
-### HyperLINQ
-Demos and slides from a talk I gave at [Techorama Netherlands](https://techorama.nl/) 2018.
+### HyperLINQ 2018 and 2022
+Demos and slides from a talk I gave at [Techorama Netherlands](https://techorama.nl/) 2018 and 2022.
 
 ### LINQ Tips and Tricks
 Demos from a [Pluralsight](https://www.pluralsight.com/) "Meet the Author" meetup in 2016.
