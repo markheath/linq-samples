@@ -17,6 +17,19 @@ void SelectNPlusOneDemo()
 }
 
 
+void SelectNPlusOneDemoAnonymousObject()
+{
+    using (var db = new MusicStoreDb())
+    {
+        foreach (var album in db.Albums.Where(a => a.Title.Contains("live"))
+            .Select(a => new { a.Title, ArtistName = a.Artist.Name}))
+        {
+            Console.WriteLine($"FOUND ALBUM: {album.Title} by {album.ArtistName}");
+        }
+        Console.ReadLine();
+    }
+}
+
 void ShowSqlDemo()
 {
     using (var db = new MusicStoreDb())
