@@ -1,14 +1,22 @@
 # LINQ Samples
 This repo contains the demos from several talks and presentations on LINQ by Mark Heath
 
-## More Effective LINQ
-These are the demos from Mark Heath's ["More Effective LINQ" Pluralsight course](https://app.pluralsight.com/library/courses/linq-more-effective/table-of-contents).
+
+## LINQ Best Practices
+These are the demos from Mark Heath's ["LINQ Best Practices" Pluralsight course](https://app.pluralsight.com/library/courses/linq-best-practices/table-of-contents).
 
 Note: Many of the demos for this course are LINQPad scripts.
 
-The easiest way to use them is to install LINQPad (available at LINQPad.net), and then you can double-click the .linq files to load them. Please note that for any .linq scripts that use NuGet packages you will need a paid version of LINQPad to actually tun them.
+The easiest way to use them is to install LINQPad (available at [LINQPad.net](https://linqpad.net)), and then you can double-click the .linq files to load them. Please note that for any .linq scripts that use NuGet packages you will need a paid version of LINQPad to actually tun them.
 
-However, you don't actually need to use LINQPad. You can simply open these .linq files in any text editor (such as notepad) and you will see the C# code snippets shown in the videos, with some information at the top of the file about what type of LINQPad query it is, and any NuGet packages or namespaces that were referenced.
+However, you don't actually need to use LINQPad. You can simply open these `.linq` files in any text editor (such as notepad) and you will see the C# code snippets shown in the videos, with some information at the top of the file about what type of LINQPad query it is, and any NuGet packages or namespaces that were referenced.
+
+The folders also contain a `csproj` for each module that allows you to view and experiment with all the demo code in Visual Studio or Visual Studio Code, without the need for LINQPad if you prefer.
+
+## More Effective LINQ (2016)
+These are the demos from Mark Heath's ["More Effective LINQ" Pluralsight course](https://app.pluralsight.com/library/courses/linq-more-effective/table-of-contents). (which has now been replaced by the [LINQ Best Practices](https://app.pluralsight.com/library/courses/linq-best-practices/table-of-contents) course mentioned above)
+
+Note: Many of the demos for this course are LINQPad scripts.
 
 ### Advent of Code 2015
 Video solutions in both C# using LINQ (and MoreLINQ) and F# for all the [Advent of Code](https://adventofcode.com) daily challenges are available at http://tinyurl.com/aoclinq
